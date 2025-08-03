@@ -35,6 +35,30 @@
         </extension>
     </addon>
 
+    <addon id="plugin.audio.music-addon"
+           name="Music Add-on"
+           version="1.0.0"
+           provider-name="Your Name">
+        <url>https://freeviewkodi.github.io/repo/plugin.audio.music-addon-1.0.0.zip</url>
+        <extension point="xbmc.addon.metadata">
+            <summary>A music streaming addon.</summary>
+            <description>This add-on plays music from various online sources.</description>
+            <disclaimer>A disclaimer if needed</disclaimer>
+            <platform>all</platform>
+        </extension>
+    </addon>
+
+    <addon id="plugin.program.utility-tool"
+           name="Utility Tool"
+           version="1.0.0"
+           provider-name="Your Name">
+        <url>https://freeviewkodi.github.io/repo/plugin.program.utility-tool-1.0.0.zip</url>
+        <extension point="xbmc.addon.metadata">
+            <summary>A useful Kodi utility.</summary>
+            <description>This add-on provides various tools and settings to manage your Kodi setup.</description>
+            <disclaimer>A disclaimer if needed</disclaimer>
+            <platform>all</platform>
+        </extension>
+    </addon>
+
 </addons>
-
-
