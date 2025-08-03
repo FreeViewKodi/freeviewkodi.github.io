@@ -1,35 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-    <!-- This is the master list of addons in your repository.
-         Add a new entry here for each addon you want to distribute.
-         The URL points to the zip file of your video addon. -->
+    <!-- This is the entry for your repository addon itself -->
+    <addon id="repository.freeviewkodi"
+           name="FreeViewKodi Repository"
+           version="1.0.0"
+           provider-name="Your Name">
+        <extension point="xbmc.addon.repository"
+                   name="FreeViewKodi Repository">
+            <dir>
+                <info compressed="true">https://freeviewkodi.github.io/repo/addons.xml</info>
+                <checksum>https://freeviewkodi.github.io/repo/addons.xml.md5</checksum>
+                <datadir zip="true">https://freeviewkodi.github.io/repo/</datadir>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Repository for FreeViewKodi addon</summary>
+            <description>Install addons from the FreeViewKodi developer.</description>
+            <platform>all</platform>
+            <assets>
+                <icon>icon.png</icon>
+            </assets>
+        </extension>
+    </addon>
+
+    <!-- This is the entry for your main video addon -->
     <addon id="plugin.video.freeviewkodi"
            name="FreeViewKodi"
            version="1.0.0"
            provider-name="Your Name">
-        <requires>
-            <import addon="xbmc.python" version="3.0.0"/>
-            <import addon="script.module.beautifulsoup4"/>
-            <import addon="script.module.requests"/>
-        </requires>
-        <extension point="xbmc.python.pluginsource"
-                   library="addon.py">
-            <provides>video</provides>
-        </extension>
+        <!-- The URL points to the zip file for this specific addon -->
+        <url>https://freeviewkodi.github.io/repo/plugin.video.freeviewkodi-1.0.0.zip</url>
+        <!-- The checksum is the MD5 hash of the addon's zip file, not the addons.xml file -->
+        <checksum>your_md5_hash_of_the_addon_zip_here</checksum>
         <extension point="xbmc.addon.metadata">
-            <summary lang="en_GB">Stream Freeview TV channels live in Kodi.</summary>
-            <description lang="en_GB">
-                An unofficial addon for watching live Freeview TV.
-                This addon fetches stream URLs and displays them in a user-friendly interface.
-            </description>
-            <disclaimer lang="en_GB">
-                This is a third-party addon and is not affiliated with Freeview.
-                Use at your own risk.
-            </disclaimer>
-            <assets>
-                <icon>resources/icon.png</icon>
-                <fanart>resources/fanart.jpg</fanart>
-            </assets>
+            <summary>A summary of your addon</summary>
+            <description>A longer description of what your addon does.</description>
+            <disclaimer>A disclaimer if needed</disclaimer>
+            <platform>all</platform>
         </extension>
     </addon>
+
 </addons>
