@@ -4,45 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeViewKodi Repository</title>
-    <!-- Use Tailwind CSS for a modern, responsive design -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Set a custom font for the entire body */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-    <div class="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
-        <!-- Main heading for the page -->
-        <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">FreeViewKodi Repository</h1>
-        
-        <!-- A brief description of the purpose -->
-        <p class="text-gray-600 text-center mb-8">
-            This page mimics the directory where Kodi downloads addon files. You can find the repository and video addon ZIPs below.
-        </p>
-
-        <!-- Container for the downloadable files -->
-        <div class="space-y-4">
-            <!-- Link for the repository addon ZIP file -->
-            <a href="https://github.com/FreeViewKodi/repository.freeview/archive/refs/heads/kodi.zip" 
-               class="flex items-center justify-between p-4 bg-gray-50 rounded-md hover:bg-gray-100 transition duration-300 ease-in-out">
-                <span class="text-lg font-medium text-gray-700">repository.freeview-kodi.zip</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-            </a>
-
-            <!-- Link for the main video addon ZIP file -->
-            <a href="https://github.com/FreeViewKodi/plugin.video.freeview/archive/refs/heads/kodi.zip" 
-               class="flex items-center justify-between p-4 bg-gray-50 rounded-md hover:bg-gray-100 transition duration-300 ease-in-out">
-                <span class="text-lg font-medium text-gray-700">plugin.video.freeview-kodi.zip</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-            </a>
-        </div>
+<body>
+    <div class="container">
+        <h1>FreeViewKodi Repository</h1>
+        <p>This page mimics a simple directory where Kodi downloads addon files.</p>
+        <ul class="file-list">
+            <li>
+                <a href="https://github.com/FreeViewKodi/repository.freeview/archive/refs/heads/kodi.zip">
+                    repository.freeview-kodi.zip
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/FreeViewKodi/plugin.video.freeview/archive/refs/heads/kodi.zip">
+                    plugin.video.freeview-kodi.zip
+                </a>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
