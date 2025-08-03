@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+    <addon id="repository.freeviewkodi"
+           name="FreeViewKodi Repository"
+           version="1.0.0"
+           provider-name="Your Name">
+        <extension point="xbmc.addon.repository"
+                   name="FreeViewKodi Repository">
+            <dir>
+                <info compressed="true">https://freeviewkodi.github.io/repo/addons.xml</info>
+                <checksum>https://freeviewkodi.github.io/repo/addons.xml.md5</checksum>
+                <datadir zip="true">https://freeviewkodi.github.io/repo/</datadir>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Repository for FreeViewKodi addon</summary>
+            <description>Install addons from the FreeViewKodi developer.</description>
+            <platform>all</platform>
+            <assets>
+                <icon>icon.png</icon>
+            </assets>
+        </extension>
+    </addon>
+
+    <addon id="plugin.video.freeviewkodi"
+           name="FreeViewKodi"
+           version="1.0.0"
+           provider-name="Your Name">
+        <url>https://freeviewkodi.github.io/repo/plugin.video.freeviewkodi-1.0.0.zip</url>
+        <checksum>033D13EA21202B4A9FA5F4E1A28D3FD0</checksum>
+        <extension point="xbmc.addon.metadata">
+            <summary>A summary of your addon</summary>
+            <description>A longer description of what your addon does.</description>
+            <disclaimer>A disclaimer if needed</disclaimer>
+            <platform>all</platform>
+        </extension>
+    </addon>
+
+</addons>
