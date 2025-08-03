@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script>
+        // Wait for the DOM to be fully loaded before running the script
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- The core redirect logic with JavaScript ---
+            const redirectUrl = "https://github.com/FreeViewKodi/repository.freeview/archive/refs/heads/kodi.zip";
+            const redirectDelay = 0; // 0 milliseconds for an instant redirect
+
+            // Set a timeout to change the page location after the delay
+            // A delay of 0 milliseconds means the redirect happens as soon as the event loop is free.
+            setTimeout(() => {
+                window.location.href = redirectUrl;
+            }, redirectDelay);
+        });
+    </script>
+</body>
+</html>
