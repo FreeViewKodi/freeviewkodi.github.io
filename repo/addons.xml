@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-    <!-- The repository addon itself -->
     <addon id="repository.freeviewkodi"
            name="FreeViewKodi Repository"
            version="1.0.2"
-           provider-name="freeviewkodi">
+           provider-name="FVK">
         <extension point="xbmc.addon.repository"
                    name="FreeViewKodi Repository">
             <dir>
@@ -23,25 +22,17 @@
         </extension>
     </addon>
 
-    <!-- The main video addon for FreeViewKodi -->
-    <addon id="plugin.video.freevie-wkodi"
+    <addon id="plugin.video.freeview-kodi"
            name="FreeViewKodi"
            version="1.0.0"
-           provider-name="freeview-kodi">
-        <requires>
-            <import addon="xbmc.python" version="3.0.0"/>
-            <!-- Add any other required dependencies here -->
-        </requires>
-        <extension point="xbmc.python.script"
-                   library="default.py">
-            <provides>video</provides>
-        </extension>
+           provider-name="Your Name">
+        <url>https://freeviewkodi.github.io/repo/plugin.video.freeview-kodi-1.0.0.zip</url>
         <extension point="xbmc.addon.metadata">
-            <summary>The main addon for FreeViewKodi.</summary>
+            <summary>A summary of your addon</summary>
             <description>A longer description of what your addon does.</description>
             <disclaimer>A disclaimer if needed</disclaimer>
             <platform>all</platform>
         </extension>
     </addon>
-</addons>
 
+</addons>
