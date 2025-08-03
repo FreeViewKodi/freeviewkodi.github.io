@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-    <addon id="repository.freeviewkodi"
+    <addon id="repository.freeview-kodi"
            name="FreeViewKodi Repository"
            version="1.0.2"
            provider-name="FVK">
@@ -36,3 +36,4 @@
     </addon>
 
 </addons>
+
