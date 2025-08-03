@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+    <!-- This is the master list of addons in your repository.
+         Add a new entry here for each addon you want to distribute.
+         The URL points to the zip file of your video addon. -->
+    <addon id="plugin.video.freeviewkodi"
+           name="FreeViewKodi"
+           version="1.0.0"
+           provider-name="Your Name">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0"/>
+            <import addon="script.module.beautifulsoup4"/>
+            <import addon="script.module.requests"/>
+        </requires>
+        <extension point="xbmc.python.pluginsource"
+                   library="addon.py">
+            <provides>video</provides>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en_GB">Stream Freeview TV channels live in Kodi.</summary>
+            <description lang="en_GB">
+                An unofficial addon for watching live Freeview TV.
+                This addon fetches stream URLs and displays them in a user-friendly interface.
+            </description>
+            <disclaimer lang="en_GB">
+                This is a third-party addon and is not affiliated with Freeview.
+                Use at your own risk.
+            </disclaimer>
+            <assets>
+                <icon>resources/icon.png</icon>
+                <fanart>resources/fanart.jpg</fanart>
+            </assets>
+        </extension>
+    </addon>
+</addons>
