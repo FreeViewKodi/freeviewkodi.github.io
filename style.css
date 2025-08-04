@@ -1,0 +1,64 @@
+/* This stylesheet contains all custom CSS for the Kodi addon website.
+    It should be linked to every HTML page to ensure a consistent look and feel.
+    Example: <link href="style.css" rel="stylesheet">
+*/
+
+/* Use the Inter font, loaded from Google Fonts via a link in the HTML head */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom styles for code blocks, used on pages like the homepage and data structure page */
+.code-block {
+    background-color: #1f2937;
+    color: #d1d5db;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Styling for the copy-to-clipboard button */
+.copy-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #4b5563;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #6b7280;
+}
+
+/* Custom styles for the "How it Works" flow diagram, used on the main hub page */
+.flow-box {
+    border: 2px solid #374151;
+    background-color: #3f4e64;
+}
+
+.flow-arrow {
+    color: #6b7280;
+}
+
+/* Custom styles for the details/summary element for the troubleshooting section */
+summary {
+    cursor: pointer;
+    list-style: none; /* Hide default arrow */
+}
+summary::before {
+    content: "▶";
+    margin-right: 0.5rem;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+details[open] summary::before {
+    transform: rotate(90deg);
+}
