@@ -2,7 +2,7 @@
 <addons>
     <addon id="repository.freeview-kodi"
            name="[COLOR gold]FreeViewKodi Repository[/COLOR]"
-           version="3.6.5"
+           version="0.0.2"
            provider-name="FreeViewKodi">
         <extension point="xbmc.addon.repository"
                    name="FreeViewKodi Repository">
@@ -93,6 +93,7 @@
     </addon>
 
 </addons>
+
 
 
 
