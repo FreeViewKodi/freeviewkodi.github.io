@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-    <addon id="repository.freeview-kodi"
-           name="FreeViewKodi Repository"
-           version="0.0.2"
-           provider-name="FVK">
+    <addon id="repository.freeviewkodi"
+           name="[COLOR gold]FreeViewKodi Repository[/COLOR]"
+           version="1.0.0"
+           provider-name="FreeViewKodi">
         <extension point="xbmc.addon.repository"
                    name="FreeViewKodi Repository">
             <dir>
@@ -13,66 +13,76 @@
             </dir>
         </extension>
         <extension point="xbmc.addon.metadata">
-            <summary>Repository for FreeViewKodi addon</summary>
-            <description>Install addons from the FreeViewKodi developer.</description>
+            <summary>The official repository for FreeViewKodi addons.</summary>
+            <description>Install and receive updates for all addons created by the FreeViewKodi team, including M3U managers, web UIs, and program tools.</description>
+            <disclaimer>This repository and its addons are not affiliated with the official Kodi project.</disclaimer>
             <platform>all</platform>
             <assets>
                 <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
             </assets>
         </extension>
     </addon>
 
-    <addon id="plugin.video.freeview-kodi"
-           name="FreeViewKodi"
+    <addon id="plugin.program.m3u-manager-FVK"
+           name="M3U Manager"
            version="1.0.0"
-           provider-name="Your Name">
+           provider-name="FreeViewKodi">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+            <import addon="script.module.requests" version="2.22.0" />
+        </requires>
         <extension point="xbmc.python.pluginsource" library="default.py">
-            <provides>video</provides>
+            <provides>program</provides>
         </extension>
         <extension point="xbmc.addon.metadata">
-            <summary>A summary of your addon</summary>
-            <description>A longer description of what your addon does.</description>
-            <disclaimer>A disclaimer if needed</disclaimer>
+            <summary>A tool to manage and update your M3U playlist files.</summary>
+            <description>This addon allows you to easily edit, sort, and update your IPTV M3U playlists directly from Kodi, ensuring your channel list is always current.</description>
             <platform>all</platform>
             <assets>
                 <icon>icon.png</icon>
+                <screenshot>resources/screenshot1.jpg</screenshot>
             </assets>
         </extension>
     </addon>
 
-    <addon id="plugin.audio.music-addon"
-           name="Music Add-on"
+    <addon id="service.webui.status-FVK"
+           name="Status WebUI"
            version="1.0.0"
-           provider-name="Your Name">
-        <extension point="xbmc.python.pluginsource" library="default.py">
-            <provides>audio</provides>
-        </extension>
+           provider-name="FreeViewKodi">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+        </requires>
+        <extension point="xbmc.service" library="service.py" start="startup"/>
         <extension point="xbmc.addon.metadata">
-            <summary>A music streaming addon.</summary>
-            <description>This add-on plays music from various online sources.</description>
-            <disclaimer>A disclaimer if needed</disclaimer>
+            <summary>A web interface to monitor Kodi status.</summary>
+            <description>Provides a simple web interface to view the current status, logs, and other useful information about your Kodi instance from any web browser on your local network.</description>
             <platform>all</platform>
             <assets>
                 <icon>icon.png</icon>
             </assets>
         </extension>
     </addon>
-
-    <addon id="plugin.program.utility-tool"
+    
+    <addon id="plugin.program.utility-FVK"
            name="Utility Tool"
            version="1.0.0"
-           provider-name="Your Name">
+           provider-name="FreeViewKodi">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+        </requires>
         <extension point="xbmc.python.pluginsource" library="default.py">
             <provides>program</provides>
         </extension>
         <extension point="xbmc.addon.metadata">
             <summary>A useful Kodi utility.</summary>
-            <description>This add-on provides various tools and settings to manage your Kodi setup.</description>
-            <disclaimer>A disclaimer if needed</disclaimer>
+            <description>This add-on provides various tools and settings to manage your Kodi setup, such as clearing cache, managing backups, and more.</description>
+            <disclaimer>This tool is intended for advanced users. Use at your own risk.</disclaimer>
             <platform>all</platform>
             <assets>
                 <icon>icon.png</icon>
             </assets>
         </extension>
     </addon>
+
 </addons>
