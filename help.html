@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - FreeViewKodi</title>
+    <!-- Link to the main stylesheet for all custom styles -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Include the Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main container for the help content -->
+    <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl max-w-5xl w-full mx-auto">
+        
+        <!-- Header section with the page title and description -->
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-400 mb-4 tracking-tight">Help & Support</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                Find answers to common questions and learn how to get help with the FreeViewKodi add-on.
+            </p>
+        </header>
+
+        <!-- Main content area for help sections -->
+        <main class="space-y-12">
+            
+            <!-- Frequently Asked Questions (FAQ) Section -->
+            <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="bg-gray-600 p-4 rounded-lg">
+                        <summary class="font-semibold text-lg text-white">What is FreeViewKodi?</summary>
+                        <p class="mt-4 text-gray-200">
+                            FreeViewKodi is an unofficial Kodi add-on that allows you to manage and stream your own video libraries using simple JSON data files. It's designed to be a highly customizable and local-first solution for your media.
+                        </p>
+                    </details>
+                    <details class="bg-gray-600 p-4 rounded-lg">
+                        <summary class="font-semibold text-lg text-white">How do I add new content?</summary>
+                        <p class="mt-4 text-gray-200">
+                            To add new content, you must edit the JSON files (e.g., `tvshows.json`, `movies.json`) located in your add-on's data folder. Each video item is an object in a JSON array. See the **Data Structure** section on the homepage for an example.
+                        </p>
+                    </details>
+                    <details class="bg-gray-600 p-4 rounded-lg">
+                        <summary class="font-semibold text-lg text-white">Is this add-on officially supported by Kodi or Freeview?</summary>
+                        <p class="mt-4 text-gray-200">
+                            No, this add-on is an independent, unofficial project. It is not affiliated with, endorsed by, or supported by either the Kodi Foundation or Freeview.
+                        </p>
+                    </details>
+                    <details class="bg-gray-600 p-4 rounded-lg">
+                        <summary class="font-semibold text-lg text-white">What platforms does it work on?</summary>
+                        <p class="mt-4 text-gray-200">
+                            The add-on should work on any platform that supports modern versions of Kodi, including Windows, macOS, Linux, Android, and Raspberry Pi.
+                        </p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Get in Touch Section -->
+            <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Get in Touch</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Report a Bug or Request a Feature</h3>
+                        <p class="text-gray-300">
+                            For technical issues, bug reports, or feature requests, please visit the project's GitHub page and open a new issue.
+                        </p>
+                        <a href="https://github.com/FreeViewKodi/freeviewkodi.github.io/issues" target="_blank" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
+                            Open an Issue on GitHub
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">General Inquiries</h3>
+                        <p class="text-gray-300">
+                            For other questions, you can contact us via email at <a href="mailto:support@freeviewkodi.io" class="text-blue-400 hover:underline">support@freeviewkodi.io</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer with copyright information -->
+        <footer class="mt-12 pt-8 text-center border-t border-gray-700">
+            <p class="text-sm text-gray-500">
+                &copy; 2025 FreeViewKodi. All rights reserved.
+            </p>
+        </footer>
+    </div>
+    
+    <!-- Link to the shared JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
