@@ -82,7 +82,7 @@
            name="Utility Tool"
            version="1.0.0"
            provider-name="FreeViewKodi">
-        <url>https://freeviewkodi.github.io/repo/plugin.program.utility-tool-1.0.0.zip</url>
+        <url>https://github.com/FreeViewKodi/plugin.program.utility/archive/refs/heads/fvk.zip</url>
         <extension point="xbmc.addon.metadata">
             <summary>A useful Kodi utility.</summary>
             <description>This add-on provides various tools and settings to manage your Kodi setup.</description>
@@ -92,5 +92,6 @@
     </addon>
 
 </addons>
+
 
 
