@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Guide - FreeViewKodi</title>
+    <!-- Link to the main stylesheet for all custom styles -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Include the Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main container for the installation guide content -->
+    <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl max-w-5xl w-full mx-auto">
+        
+        <!-- Header section with the page title and description -->
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-400 mb-4 tracking-tight">Installation Guide</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                Follow these simple steps to install the FreeViewKodi addon in your Kodi client. We cover both repository and manual installation methods.
+            </p>
+        </header>
+
+        <!-- Optional: Placeholder for a video tutorial -->
+        <section class="mb-12">
+            <div class="bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+                <div class="aspect-w-16 aspect-h-9">
+                    <div class="w-full h-96 bg-gray-600 flex items-center justify-center text-center text-gray-400">
+                        <!-- Replace this div with your embedded video code (e.g., from YouTube or Vimeo) -->
+                        <p class="p-4">Placeholder for an installation video tutorial.<br>e.g., &lt;iframe width="560" height="315" src="..."&gt;&lt;/iframe&gt;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main content area for the installation steps -->
+        <main class="space-y-12">
+            
+            <!-- Method 1: Install from Repository URL -->
+            <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Method 1: Install from Repository URL (Recommended)</h2>
+                <p class="text-gray-300 mb-6">This method allows you to receive automatic updates for the addon.</p>
+                <ol class="list-decimal list-inside text-left space-y-4 text-gray-300">
+                    <li>
+                        From the Kodi home screen, navigate to **Settings** (the gear icon).
+                        <div class="mt-4 bg-gray-600 rounded-lg overflow-hidden w-full h-48 md:h-64 flex items-center justify-center text-gray-400">
+                            Placeholder for Screenshot: Kodi Settings Screen
+                        </div>
+                    </li>
+                    <li>
+                        In the Settings menu, go to **File manager**, then select **Add source**.
+                        <div class="mt-4 bg-gray-600 rounded-lg overflow-hidden w-full h-48 md:h-64 flex items-center justify-center text-gray-400">
+                            Placeholder for Screenshot: Add Source Screen
+                        </div>
+                    </li>
+                    <li>
+                        Click on the `<none>` field and enter the repository URL: <code class="bg-gray-800 p-1 rounded font-mono text-white break-all">https://freeviewkodi.github.io/repo/</code>.
+                    </li>
+                    <li>
+                        In the box below, name the source <code class="bg-gray-800 p-1 rounded font-mono text-white">FreeViewKodi</code> and click OK.
+                    </li>
+                    <li>
+                        Go back to the main **Settings** menu and select **Add-ons**.
+                    </li>
+                    <li>
+                        Click the **Package installer** icon (the open box icon), then choose **Install from zip file**.
+                        <p class="text-sm text-yellow-400 mt-2">
+                            <strong class="font-bold">Important:</strong> You may need to enable "Unknown sources" in your Kodi settings before proceeding.
+                        </p>
+                    </li>
+                    <li>
+                        Select the source you just added: <code class="bg-gray-800 p-1 rounded font-mono text-white">FreeViewKodi</code>.
+                    </li>
+                    <li>
+                        Select the repository file (e.g., <code class="bg-gray-800 p-1 rounded font-mono text-white">repository.freeviewkodi-x.x.zip</code>) and wait for the "Add-on enabled" notification.
+                    </li>
+                    <li>
+                        Go back one screen and select **Install from repository**. Choose the **FreeViewKodi Repository**.
+                    </li>
+                    <li>
+                        Navigate to **Video add-ons**, select **FreeViewKodi**, and click Install.
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Method 2: Install from Zip File -->
+            <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Method 2: Manual Installation from Zip</h2>
+                <p class="text-gray-300 mb-6">Use this method if you prefer to download the file directly.</p>
+                <ol class="list-decimal list-inside text-left space-y-4 text-gray-300">
+                    <li>
+                        Download the latest version of the repository zip file from the project homepage or directly from this link: <a href="https://github.com/FreeViewKodi/repository.freeviewkodi/archive/refs/heads/main.zip" class="text-blue-400 hover:underline">Download Zip File</a>.
+                    </li>
+                    <li>
+                        Save the `.zip` file to a location you can access from your Kodi device.
+                    </li>
+                    <li>
+                        In Kodi, navigate to **Settings** &rarr; **Add-ons**.
+                    </li>
+                    <li>
+                        Click the **Package installer** icon and select **Install from zip file**.
+                    </li>
+                    <li>
+                        Browse to the location where you saved the downloaded zip file and select it.
+                    </li>
+                    <li>
+                        Wait for the "Add-on enabled" notification to confirm a successful installation.
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Troubleshooting Section -->
+            <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Troubleshooting Common Issues</h2>
+                <div class="space-y-4">
+                    <details class="bg-gray-600 p-4 rounded-lg">
+                        <summary class="font-semibold text-lg text-white">I get an "Unknown source" error when trying to install.</summary>
+                        <p class="mt-4 text-gray-200">
+                            You need to enable "Unknown sources" in your Kodi settings. Go to **Settings** &rarr; **System** &rarr; **Add-ons** and toggle on the "Unknown sources" option.
+                        </p>
+                    </details>
+                    <details class="bg-gray-600 p-4 rounded-lg">
+                        <summary class="font-semibold text-lg text-white">The repository link is not working.</summary>
+                        <p class="mt-4 text-gray-200">
+                            Double-check that you have typed the URL exactly as shown: <code class="bg-gray-800 p-1 rounded font-mono text-white">https://freeviewkodi.github.io/repo/</code>. Ensure there are no typos or extra spaces.
+                        </p>
+                    </details>
+                    <details class="bg-gray-600 p-4 rounded-lg">
+                        <summary class="font-semibold text-lg text-white">I am getting a "Dependencies not met" error.</summary>
+                        <p class="mt-4 text-gray-200">
+                            This error typically means a required component of the addon is missing. This can sometimes be resolved by making sure your Kodi is up to date. You can also try a fresh installation of Kodi if the issue persists.
+                        </p>
+                    </details>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer with copyright information -->
+        <footer class="mt-12 pt-8 text-center border-t border-gray-700">
+            <p class="text-sm text-gray-500">
+                &copy; 2025 FreeViewKodi. All rights reserved.
+            </p>
+        </footer>
+    </div>
+    
+    <!-- Link to the shared JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
