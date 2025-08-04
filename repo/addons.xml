@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-    <addon id="repository.freeviewkodi"
+    <addon id="repository.freeview-kodi"
            name="[COLOR gold]FreeViewKodi Repository[/COLOR]"
-           version="1.0.0"
+           version="3.6.5"
            provider-name="FreeViewKodi">
         <extension point="xbmc.addon.repository"
                    name="FreeViewKodi Repository">
@@ -86,3 +86,4 @@
     </addon>
 
 </addons>
+
