@@ -6,21 +6,58 @@
     <title>FreeViewKodi - A Kodi Addon</title>
     <!-- Include the Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Use the Inter font */
         body {
             font-family: 'Inter', sans-serif;
         }
+        /* Custom styles for the code block and copy button */
+        .code-block {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            position: relative;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: #4b5563;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #6b7280;
+        }
+        /* Custom styles for the "How it Works" flow diagram */
+        .flow-box {
+            border: 2px solid #374151;
+            background-color: #3f4e64;
+        }
+        .flow-arrow {
+            color: #6b7280;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen p-4">
-    <!-- Main container for the landing page content -->
-    <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl max-w-4xl w-full mx-auto text-center">
 
+    <!-- Main container for the landing page content -->
+    <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl max-w-5xl w-full mx-auto">
+        
         <!-- Header section with the project title and description -->
-        <header class="mb-8 md:mb-12">
-            <!-- Add a logo at the top -->
-            <img src="images/logo.png" alt="FreeViewKodi Logo" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/FreeViewKodi/freeviewkodi.github.io/refs/heads/main/static/icon.png'">
+        <header class="text-center mb-8 md:mb-12">
+            <!-- Add a logo at the top with a placeholder fallback -->
+            <img src="images/logo.png" alt="FreeViewKodi Logo" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg" onerror="this.onerror=null; this.src='https://placehold.co/96x96/4B5563/FFFFFF?text=Logo'">
             <h1 class="text-4xl md:text-6xl font-extrabold text-blue-400 mb-4 tracking-tight">FreeViewKodi</h1>
             <p class="text-lg md:text-xl text-gray-300">
                 The unofficial Kodi addon for streaming Freeview channels.
@@ -28,53 +65,199 @@
         </header>
 
         <!-- Main content area -->
-        <main class="space-y-8">
-            <!-- Section for adding the repository URL -->
-            <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Add to Kodi</h2>
-                <p class="text-gray-300 mb-4 max-w-xl mx-auto">
-                    To install the addon and receive automatic updates, add the repository as a source in Kodi.
-                </p>
-                <div class="bg-gray-900 p-4 rounded-xl font-mono text-blue-400 text-sm md:text-base break-all">
-                    https://freeviewkodi.github.io/repo/
+        <main class="space-y-12">
+
+            <!-- Section for adding the repository URL and download zip file -->
+            <section class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Add to Kodi</h2>
+                    <p class="text-gray-300 mb-4 max-w-xl mx-auto">
+                        To install the addon and receive automatic updates, add this repository URL as a source in Kodi.
+                    </p>
+                    <div class="bg-gray-900 p-4 rounded-xl font-mono text-blue-400 text-sm md:text-base break-all">
+                        https://freeviewkodi.github.io/repo/
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg flex flex-col justify-center items-center">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Download the Zip File</h2>
+                    <p class="text-gray-300 mb-6 max-w-xl mx-auto text-center">
+                        Download the latest version of the repository zip file to install it manually on your Kodi device.
+                    </p>
+                    <a href="https://github.com/FreeViewKodi/repository.freeviewkodi/archive/refs/heads/main.zip" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Download Repository
+                    </a>
                 </div>
             </section>
 
-            <!-- Download section with a prominent button -->
-            <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Or, Download the Zip File</h2>
-                <p class="text-gray-300 mb-6 max-w-xl mx-auto">
-                    Download the latest version of the FreeViewKodi repository zip file to install it on your Kodi device.
-                </p>
-                <!-- This link will need to be updated with the actual URL to the repository zip file -->
-                <a href="https://github.com/FreeViewKodi/repository.freeviewkodi/archive/refs/heads/main.zip" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                    Download Repository
-                </a>
+            <!-- Key Features Section -->
+            <section>
+                <div class="text-center mb-12">
+                   <h2 class="text-3xl font-bold text-gray-100 mb-2">Key Features</h2>
+                   <p class="text-gray-400 max-w-2xl mx-auto">This add-on is simple, extensible, and easy to manage, giving you full control over your media library through simple JSON files.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-4">🗂️</span>
+                            <h3 class="text-xl font-semibold">Organized Content</h3>
+                        </div>
+                        <p class="text-gray-300">Browse TV Shows, Movies, and Music Videos through a clean, easy-to-navigate menu within Kodi.</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-4">💾</span>
+                            <h3 class="text-xl font-semibold">Local Data Source</h3>
+                        </div>
+                        <p class="text-gray-300">Reads all content from local JSON files, making it easy to manage and customize your own video libraries.</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-4">🖥️</span>
+                            <h3 class="text-xl font-semibold">Kodi Compatibility</h3>
+                        </div>
+                        <p class="text-gray-300">Built to work with modern versions of Kodi, ensuring stability, performance, and a seamless user experience.</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-4">⚙️</span>
+                            <h3 class="text-xl font-semibold">Extensible Design</h3>
+                        </div>
+                        <p class="text-gray-300">A simple and well-commented Python codebase that's easy to understand and modify for your own purposes.</p>
+                    </div>
+                </div>
             </section>
 
-            <!-- Installation instructions section -->
+            <!-- How It Works Section -->
+            <section>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-100 mb-2">How It Works</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">This add-on acts as a bridge between your Kodi interface and simple text files. The diagram below illustrates the process.</p>
+                </div>
+                <div class="bg-gray-700 p-8 rounded-xl shadow-md">
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                        <div class="p-4 rounded-lg flow-box w-full md:w-auto">
+                            <p class="text-2xl mb-2">🖥️</p>
+                            <p class="font-semibold">Kodi Interface</p>
+                        </div>
+                        <div class="text-4xl font-light flow-arrow transform md:-rotate-0 rotate-90">&rarr;</div>
+                        <div class="p-4 rounded-lg flow-box w-full md:w-auto">
+                            <p class="text-2xl mb-2">🐍</p>
+                            <p class="font-semibold">Freeview Add-on</p>
+                        </div>
+                        <div class="text-4xl font-light flow-arrow transform md:-rotate-0 rotate-90">&rarr;</div>
+                        <div class="p-4 rounded-lg flow-box w-full md:w-auto">
+                            <p class="text-2xl mb-2">📄</p>
+                            <p class="font-semibold">JSON Files</p>
+                            <p class="text-xs text-gray-500">(tvshows.json, etc.)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Installation Guide Section -->
             <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Installation Guide</h2>
-                <p class="text-gray-300 text-left mb-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Installation Guide</h2>
+                <p class="text-gray-300 text-left mb-4 max-w-2xl mx-auto">
                     Follow these simple steps to install the FreeViewKodi addon in your Kodi client:
                 </p>
-                <ol class="list-decimal list-inside text-left space-y-2 text-gray-300">
+                <ol class="list-decimal list-inside text-left space-y-2 text-gray-300 max-w-2xl mx-auto">
                     <li>Launch Kodi and navigate to the **Add-ons** section.</li>
                     <li>Click the **Package installer** icon (the open box icon).</li>
                     <li>Select **Install from zip file**.</li>
-                    <li>Browse to the downloaded `freeviewkodi.github.io-main.zip` file and select it.</li>
+                    <li>Browse to the downloaded `repository.freeviewkodi-main.zip` file and select it.</li>
                     <li>Wait for the "Add-on enabled" notification.</li>
                     <li>Go back and select **Install from repository**, then choose the **FreeViewKodi Repository**.</li>
                     <li>Navigate to **Video add-ons** and select **FreeViewKodi** to install it.</li>
                 </ol>
             </section>
 
+            <!-- Project Roadmap and Upgrades Section -->
+            <section class="bg-gray-700 p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Project Roadmap & Upgrades</h2>
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-300 mb-2">Current Status</h3>
+                        <p class="text-gray-300">The project provides a stable, file-based Kodi add-on for managing media libraries. It is a simple, extensible framework that prioritizes user-managed content.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-300 mb-2">Planned Features & Upgrades</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li><strong class="text-white">API Integration:</strong> Implement support for fetching content from a remote API, allowing for dynamic updates without manual file editing.</li>
+                            <li><strong class="text-white">Live TV Support:</strong> Extend the data structure and logic to support live streaming channels with EPG (Electronic Program Guide) data.</li>
+                            <li><strong class="text-white">Improved Metadata Handling:</strong> Add support for more metadata fields in the JSON, such as ratings, genres, and cast information.</li>
+                            <li><strong class="text-white">User Interface Customization:</strong> Introduce settings to allow users to customize the layout and appearance of the addon within Kodi.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-300 mb-2">Contribution</h3>
+                        <p class="text-gray-300">This is an open-source project, and contributions are welcome. Feel free to submit pull requests or open issues on the project's GitHub page. Your feedback and code are invaluable.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Structure and Commit History Section -->
+            <section>
+                <div class="text-center mb-12">
+                   <h2 class="text-3xl font-bold text-gray-100 mb-2">JSON Data Structure</h2>
+                   <p class="text-gray-400 max-w-2xl mx-auto">The add-on reads content from a JSON array. Each object in the array represents one video item. You must follow this structure in your content files.</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <div class="code-block">
+                        <button class="copy-btn" id="copyButton">Copy</button>
+                        <code id="codeContent">
+[
+    {
+        "title": "Example Show",
+        "plot": "A brief description of the show.",
+        "thumbnail": "https://via.placeholder.com/150",
+        "url": "https://example.com/videos/show.mp4"
+    }
+]
+                        </code>
+                    </div>
+                </div>
+            </section>
         </main>
         
         <!-- Footer with copyright information -->
-        <footer class="mt-8 text-sm text-gray-500">
-            &copy; 2025 FreeViewKodi. All rights reserved.
+        <footer class="mt-12 pt-8 text-center border-t border-gray-700">
+            <p class="text-sm text-gray-500">
+                &copy; 2025 FreeViewKodi. All rights reserved.
+            </p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the copy button and the code block
+            const copyButton = document.getElementById('copyButton');
+            const codeContent = document.getElementById('codeContent');
+
+            // Add a click event listener to the copy button
+            copyButton.addEventListener('click', function() {
+                const textToCopy = codeContent.innerText.trim();
+                
+                // Use the document.execCommand('copy') fallback as navigator.clipboard
+                // may be restricted in some environments (like iframes)
+                const textArea = document.createElement('textarea');
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    // Give user feedback that the content was copied
+                    copyButton.textContent = 'Copied!';
+                    setTimeout(() => {
+                        copyButton.textContent = 'Copy';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                    copyButton.textContent = 'Error';
+                }
+                document.body.removeChild(textArea);
+            });
+        });
+    </script>
+
 </body>
 </html>
