@@ -50,6 +50,7 @@
            name="Status WebUI"
            version="1.0.0"
            provider-name="FreeViewKodi">
+        <url>https://github.com/FreeViewKodi/plugin.program.utility/archive/refs/heads/fvk.zip</url>
         <requires>
             <import addon="xbmc.python" version="3.0.0" />
         </requires>
@@ -92,6 +93,7 @@
     </addon>
 
 </addons>
+
 
 
 
